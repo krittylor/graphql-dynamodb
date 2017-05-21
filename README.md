@@ -1,4 +1,4 @@
-# graphql-tutorial
+# graphql-dynamodb
 Full-stack GraphQL tutorials with React, Redux and Apollo
 
 1. Build a simple React app with GraphQL and Apollo
