@@ -1,30 +1,33 @@
 # graphql-dynamodb
-Full-stack GraphQL tutorials with React, Redux and Apollo
+Full-stack GraphQL tutorials with React, Redux and Apollo, DynamoDB
 
-1. Build a simple React app with GraphQL and Apollo
-2. Build a simple GraphQL server in 15 mins
-3. Adding mutations to your React/GraphQL app
+Currently this works with local dynamodb for development stage, you can change aws configuration anytime to use dynamodb on AWS account.
 
-More ideas for later (building on each other)...
+## Setup
+1. Server
+```bash
+   cd server
+   npm install
+   npm start
+```
+   GraphQL + DynamoDB Server will be running at localhost:4000
+2. Client
+```bash
+   cd client
+   npm install
+   npm start
+```
+   GraphQL + DynamoDB Client will be running at localhost:3000
 
-... client:
-- Advanced: updating the GraphQL store after mutations
-- mutations and optimistic UI
-- Pagination
-- Developer tools for GraphQL
-- A quick tour of GraphiQL
+## Prerequisites
+   Please make sure you're running local dynamodb on localhost:8000
 
+   To setup local dynamodb, follow this instruction[Setting Up DynamoDB Local (Downloadable Version)][]
 
-... server:
-- connecting to a REST backend
-- connecting to a Mongo backend
-- connecting to a SQL backend
-- advanced: structuring your GraphQL server
-- modularizing your GraphQL schema
+   [Setting Up DynamoDB Local (Downloadable Version)]: http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html
 
-... full-stack
-- CRUD mutations in GraphQL: create
-- CRUD mutations in GraphQL: update
-- CRUD mutations in GraphQL: delete
+   Create table with the name of configured in getTableName() from ./server/src/dataStore.js.
+   **localhost:8000/shell** will help you to operate dynamodb.
+   Change table name as you want.
 
-
+   Table has very simple structure of id as primary key and name attribute.
